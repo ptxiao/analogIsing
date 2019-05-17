@@ -1,0 +1,121 @@
+ 
+.param Rc 200
+.params C0=1.5915e-10 L0=1.5915e-10 R0=1e-09
+.params omegaPump=2*(2*pi)*1000000000 G0=0.025 dG=0.01 Tramp=1e-06 Vn=8.9443e-06
+.model idealDiode D(Ron=0.0 Roff=1Gig Vfwd=0.01)
+L001 N003 N001 {L0} Rser=0 Rpar=1e12
+C001 N001 N002 {C0} Rser=0 Rpar=1e12 RLShunt=0
+R001 0 N002 {R0}
+Df001 N001 N002 idealDiode
+Dr001 N002 N001 idealDiode
+Cp001 N001 N002 Q=({G0}+{dG}*time/{Tramp})*{C0}*cos({omegaPump}*time)*x
+L002 N007 N005 {L0} Rser=0 Rpar=1e12
+C002 N005 N006 {C0} Rser=0 Rpar=1e12 RLShunt=0
+R002 N004 N006 {R0}
+Df002 N005 N006 idealDiode
+Dr002 N006 N005 idealDiode
+Cp002 N005 N006 Q=({G0}+{dG}*time/{Tramp})*{C0}*cos({omegaPump}*time)*x
+L003 N011 N009 {L0} Rser=0 Rpar=1e12
+C003 N009 N010 {C0} Rser=0 Rpar=1e12 RLShunt=0
+R003 N008 N010 {R0}
+Df003 N009 N010 idealDiode
+Dr003 N010 N009 idealDiode
+Cp003 N009 N010 Q=({G0}+{dG}*time/{Tramp})*{C0}*cos({omegaPump}*time)*x
+L004 N015 N013 {L0} Rser=0 Rpar=1e12
+C004 N013 N014 {C0} Rser=0 Rpar=1e12 RLShunt=0
+R004 N012 N014 {R0}
+Df004 N013 N014 idealDiode
+Dr004 N014 N013 idealDiode
+Cp004 N013 N014 Q=({G0}+{dG}*time/{Tramp})*{C0}*cos({omegaPump}*time)*x
+L005 N019 N017 {L0} Rser=0 Rpar=1e12
+C005 N017 N018 {C0} Rser=0 Rpar=1e12 RLShunt=0
+R005 N016 N018 {R0}
+Df005 N017 N018 idealDiode
+Dr005 N018 N017 idealDiode
+Cp005 N017 N018 Q=({G0}+{dG}*time/{Tramp})*{C0}*cos({omegaPump}*time)*x
+L006 N023 N021 {L0} Rser=0 Rpar=1e12
+C006 N021 N022 {C0} Rser=0 Rpar=1e12 RLShunt=0
+R006 N020 N022 {R0}
+Df006 N021 N022 idealDiode
+Dr006 N022 N021 idealDiode
+Cp006 N021 N022 Q=({G0}+{dG}*time/{Tramp})*{C0}*cos({omegaPump}*time)*x
+L007 N027 N025 {L0} Rser=0 Rpar=1e12
+C007 N025 N026 {C0} Rser=0 Rpar=1e12 RLShunt=0
+R007 N024 N026 {R0}
+Df007 N025 N026 idealDiode
+Dr007 N026 N025 idealDiode
+Cp007 N025 N026 Q=({G0}+{dG}*time/{Tramp})*{C0}*cos({omegaPump}*time)*x
+L008 N031 N029 {L0} Rser=0 Rpar=1e12
+C008 N029 N030 {C0} Rser=0 Rpar=1e12 RLShunt=0
+R008 0 N030 {R0}
+Df008 N029 N030 idealDiode
+Dr008 N030 N029 idealDiode
+Cp008 N029 N030 Q=({G0}+{dG}*time/{Tramp})*{C0}*cos({omegaPump}*time)*x
+Ra001_002 N001 N005 {Rc}
+Rb001_002 N002 N006 {Rc}
+Ra001_003 N001 N009 {Rc}
+Rb001_003 N002 N010 {Rc}
+Ra001_004 N001 N014 {Rc}
+Rb001_004 N002 N013 {Rc}
+Ra001_005 N001 N018 {Rc}
+Rb001_005 N002 N017 {Rc}
+Ra001_006 N001 N022 {Rc}
+Rb001_006 N002 N021 {Rc}
+Ra001_007 N001 N025 {Rc}
+Rb001_007 N002 N026 {Rc}
+Ra001_008 N001 N029 {Rc}
+Rb001_008 N002 N030 {Rc}
+Ra002_003 N005 N009 {Rc}
+Rb002_003 N006 N010 {Rc}
+Ra002_004 N005 N013 {Rc}
+Rb002_004 N006 N014 {Rc}
+Ra002_005 N005 N017 {Rc}
+Rb002_005 N006 N018 {Rc}
+Ra002_006 N005 N021 {Rc}
+Rb002_006 N006 N022 {Rc}
+Ra002_007 N005 N025 {Rc}
+Rb002_007 N006 N026 {Rc}
+Ra002_008 N005 N029 {Rc}
+Rb002_008 N006 N030 {Rc}
+Ra003_004 N009 N014 {Rc}
+Rb003_004 N010 N013 {Rc}
+Ra003_005 N009 N018 {Rc}
+Rb003_005 N010 N017 {Rc}
+Ra003_006 N009 N021 {Rc}
+Rb003_006 N010 N022 {Rc}
+Ra003_007 N009 N026 {Rc}
+Rb003_007 N010 N025 {Rc}
+Ra003_008 N009 N029 {Rc}
+Rb003_008 N010 N030 {Rc}
+Ra004_005 N013 N018 {Rc}
+Rb004_005 N014 N017 {Rc}
+Ra004_006 N013 N022 {Rc}
+Rb004_006 N014 N021 {Rc}
+Ra004_007 N013 N025 {Rc}
+Rb004_007 N014 N026 {Rc}
+Ra004_008 N013 N030 {Rc}
+Rb004_008 N014 N029 {Rc}
+Ra005_006 N017 N022 {Rc}
+Rb005_006 N018 N021 {Rc}
+Ra005_007 N017 N026 {Rc}
+Rb005_007 N018 N025 {Rc}
+Ra005_008 N017 N029 {Rc}
+Rb005_008 N018 N030 {Rc}
+Ra006_007 N021 N026 {Rc}
+Rb006_007 N022 N025 {Rc}
+Ra006_008 N021 N029 {Rc}
+Rb006_008 N022 N030 {Rc}
+Ra007_008 N025 N030 {Rc}
+Rb007_008 N026 N029 {Rc}
+B001 N003 0 V=2*{Vn}*(random(7.046e+09*time+(0.8005))+random(6.318e+09*time+(2.148))+random(6.405e+09*time+(0.06335))+random(5.549e+09*time+(-2.1))+random(6.998e+09*time+(1.347))-0.5*5)
+B002 N007 N004 V=2*{Vn}*(random(6.35e+09*time+(2.557))+random(6.462e+09*time+(-1.768))+random(6.087e+09*time+(2.331))+random(6.839e+09*time+(-1.811))+random(5.21e+09*time+(2.115))-0.5*5)
+B003 N011 N008 V=2*{Vn}*(random(6.522e+09*time+(2.258))+random(7.193e+09*time+(0.1469))+random(6.155e+09*time+(-0.1422))+random(6.667e+09*time+(2.45))+random(5.789e+09*time+(-2.733))-0.5*5)
+B004 N015 N012 V=2*{Vn}*(random(6.553e+09*time+(0.05941))+random(5.728e+09*time+(0.759))+random(7.036e+09*time+(1.468))+random(7.028e+09*time+(-1.696))+random(7.424e+09*time+(-3.004))-0.5*5)
+B005 N019 N016 V=2*{Vn}*(random(6.143e+09*time+(-2.268))+random(6.175e+09*time+(1.693))+random(6.534e+09*time+(2.952))+random(7.144e+09*time+(-0.7113))+random(5.105e+09*time+(3.1))-0.5*5)
+B006 N023 N020 V=2*{Vn}*(random(5.497e+09*time+(-1.091))+random(7.398e+09*time+(-2.28))+random(7.409e+09*time+(-0.7241))+random(6.165e+09*time+(0.3936))+random(7.064e+09*time+(0.8409))-0.5*5)
+B007 N027 N024 V=2*{Vn}*(random(7.361e+09*time+(0.2614))+random(6.717e+09*time+(-1.162))+random(5.962e+09*time+(-2.141))+random(6.046e+09*time+(-2.183))+random(6.129e+09*time+(-2.281))-0.5*5)
+B008 N031 0 V=2*{Vn}*(random(6.732e+09*time+(1.318))+random(6.195e+09*time+(-0.2208))+random(7.422e+09*time+(-2.43))+random(5.918e+09*time+(1.262))+random(5.879e+09*time+(-2.011))-0.5*5)
+.tran 0.0001ns 1000ns
+.save V(*)
+.backanno
+.end
