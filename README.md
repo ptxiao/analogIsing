@@ -8,5 +8,6 @@ Description of the files:
 - J8.txt: a list of coupling weights (binary, -1 and +1) for a fully-connected 8-spin Ising problem. The first two columns list the spin indices. The third column contains the weight value.
 - J32.txt: a list of coupling weights (binary, -1 and +1) for a fully-connected 32-spin Ising problem.
 - Ising_32spins-Gain-155.net: LTspice netlist that implements the coupling matrix in J32.txt with a constant gain of 15.5%. The simulation results are used in Fig. 6.13.
+- Ising_32spins-Gain-11.net: LTspice netlist that implements the coupling matrix in J32.txt with a constant gain of 11%. Gives very similar results to that shown in Fig. 6.13.
 
 LTspice netlists were tested on both LTspice IV on Mac OS X and LTspice XVII on Windows 10.
