@@ -13,4 +13,4 @@ Description of the files:
 LTspice netlists were tested on both LTspice IV on Mac OS X and LTspice XVII on Windows 10.
 
 Minor thesis errata:
-- 5/18/2019: In the caption of Fig. 6.6, the references to labels within the figure should be (b), (c), (d), then (a) (rather than (a), (b), (c), (d)).
+- 5/18/2019: In the caption of Fig. 6.6, the references to labels within the figure should be (c), (b), (d), then (a) (rather than (a), (b), (c), (d)).
