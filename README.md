@@ -1,5 +1,5 @@
 # analogIsing
-LTspice netlists and problem specifications for the analog Ising machine. This folder contains supporting files for T. Patrick Xiao's PhD Thesis (Department of EECS, UC Berkeley, 2019).
+LTspice netlists and problem specifications for the analog Ising machine. This folder contains supporting files for T. Patrick Xiao's PhD Thesis, Chaper 6 (Department of EECS, UC Berkeley, 2019).
 
 Description of the files:
 - Ising_8spins.net: LTspice netlist for an analog Ising machine circuit. Implements the coupling matrix in J8.txt, also provided in Appendix G of thesis. The simulation results are used for Fig. 6.5 and Fig. 6.6.
