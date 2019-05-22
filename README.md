@@ -11,6 +11,3 @@ Description of the files:
 - Ising_32spins-Gain-11.net: LTspice netlist that implements the coupling matrix in J32.txt with a constant gain of 11%. Differs in the random initial condition, but gives very similar results to that shown in Fig. 6.13.
 
 LTspice netlists were tested on both LTspice IV on Mac OS X and LTspice XVII on Windows 10.
-
-Minor thesis errata:
-- 5/18/2019: In the caption of Fig. 6.6, the references to labels within the figure should be (c), (b), (d), then (a) (rather than (a), (b), (c), (d)).
